@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Form</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <!---->
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+    <link rel="stylesheet" href="dist/css/adminlte.css.map">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css.map">
+    <!-- <link rel="stylesheet" href="dist/css/"> -->
+   
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <div class="card card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">Horizontal Form</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="inputPassword3"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="offset-sm-2 col-sm-10">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                            <label class="form-check-label" for="exampleCheck2">Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-info">Sign in</button>
+                                <button type="submit" class="btn btn-default float-right">Cancel</button>
+                            </div>
+                            <!-- /.card-footer -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-body p-0">
+            <div class="bs-stepper">
+                <div class="bs-stepper-content">
+
+
+
+                    <!-- Form 1 -->
+                    <div id="form1" class="content active">
+                        <div class="form-group">
+                            <label for="deploymentType">Is your application from the department is already hosted in
+                                SDC</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="deploymentType" value="New" required> Yes</label>
+                                <label><input type="radio" name="deploymentType" value="Existing"> No</label>
+                            </div>
+                        </div>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm2()">Next</button>
+                    </div>
+
+                    <!-- Form 2 -->
+                    <div id="form2" class="content">
+                        <div class="card-header">
+                            <h3 class="card-title">Hosting Form</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="appName">Name of the application: </label>
+                            <input type="text" class="form-control" id="appName">
+                        </div>
+                        <div class="form-group">
+                            <label for="appDetails">Details about the application</label>
+                            <textarea class="form-control" id="appdetails"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="langUsed">Programming Languages used with their versions</label>
+                            <textarea class="form-control" id="langUsed"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="dbUsed">Database version used</label>
+                            <textarea class="form-control" id="dbUsed"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="frameworkUsed">Any Frameworks used</label>
+                            <input type="text" class="form-control" id="frameworkUsed">
+                        </div>
+                        <div class="form-group">
+                            <label for="appType">Type of Application </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Web application</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked="">
+                                <label class="form-check-label">Mobile application</label>
+                            </div>
+                        </div>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm1()">Previous</button>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm3()">Next</button>
+                    </div>
+
+                    <!-- Form 3 -->
+                    <div id="form3" class="content">
+                        <div class="card-header">
+                            <h3 class="card-title">Department Information</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="deptName">Name of the Department</label>
+                            <input type="text" class="form-control" id="deptName">
+                        </div>
+                        <div class="form-group">
+                            <label for="deptEmail">Department Email</label>
+                            <input type="text" class="form-control" id="deptEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="deptPhNum">Department Phone Number</label>
+                            <input type="text" class="form-control" id="deptPhNum">
+                        </div>
+                        <div class="form-group">
+                            <label for="deptAddrs">Department Address</label>
+                            <input type="text" class="form-control" id="deptAddrs">
+                        </div>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm2()">Previous</button>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm4()">Next</button>
+                    </div>
+
+                    <!-- Form 4 -->
+                    <div id="form4" class="content">
+                        <div class="card-header">
+                            <h3 class="card-title">Contact Information</h3>
+                        </div>
+                        <table id="contactTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Designation</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="contactName[]" required></td>
+                                    <td><input type="email" name="contactEmail[]" required></td>
+                                    <td><input type="tel" name="contactPhNum[]" required></td>
+                                    <td><input type="text" name="contactDesignation[]" required></td>
+                                    <td><button type="button" class="remove-button"
+                                            onclick="removeContact(this)">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="button" onclick="addContact()">Add Contact</button>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm3()">Previous</button>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm5()">Next</button>
+                    </div>
+
+                    <!-- Form 5 -->
+                    <div id="form5" class="content">
+                        <div class="card-header">
+                            <h3 class="card-title">Additional Information</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="concurrentUsers">Total number of concurrent connections</label>
+                            <input type="number" class="form-control" id="concurrentUsers">
+                        </div>
+                        <div class="form-group">
+                            <label for="peakTime">Any peak time of the application</label>
+                            <input type="time" class="form-control" id="peakTime">
+                        </div>
+                        <div class="form-group">
+                            <label for="loadBalance">Server Load Balance</label>
+                            <select class="custom-select" id="loadBalance">
+                                <option>Yes </option>
+                                <option>No </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ipv6Comopatibility">IPv6 Compatibility</label>
+                            <select class="custom-select" id="ipv6Comopatibility">
+                                <option>Yes </option>
+                                <option>No </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tapeBackup">Tape backup required</label>
+                            <select class="custom-select" id="tapeBackup">
+                                <option>Yes </option>
+                                <option>No </option>
+                            </select>
+                        </div>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm4()">Previous</button>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm6()">Next</button>
+                    </div>
+
+                    <!-- Form 6 -->
+                    <div id="form6" class="content">
+                        <div class="card-header">
+                            <h3 class="card-title">Details about the Virtual Machine</h3>
+                        </div>
+                        <table id="vmTable">
+                            <thead>
+                                <tr>
+                                    <th>Name of the application</th>
+                                    <th>Number of Cpus required</th>
+                                    <th>Specify all the services and versions used</th>
+                                    <th>OS Version</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="nameApp[]" required></td>
+                                    <td><input type="number" name="numOfCpus[]" required></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                                <option>Web </option>
+                                                <option>DB</option>
+                                                <option>Web+Db</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" name="osVer[]" required></td>
+                                    <td><button type="button" class="remove-button"
+                                            onclick="removeVm(this)">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="button" onclick="addVm()">Add new VM</button>
+                        <button class="bottom-nav" class="btn btn-primary" onclick="showForm5()">Previous</button>
+                        <button class="bottom-nav" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- bs-custom-file-input -->
+    <script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            // bsCustomFileInput.init();
+        });
+
+
+        function showForm1() {
+            document.getElementById('form1').classList.add('active');
+            document.getElementById('form2').classList.remove('active');
+            document.getElementById('form3').classList.remove('active');
+            document.getElementById('form4').classList.remove('active');
+            document.getElementById('form5').classList.remove('active');
+            document.getElementById('form6').classList.remove('active');
+        }
+
+        function showForm2() {
+            document.getElementById('form1').classList.remove('active');
+            document.getElementById('form2').classList.add('active');
+            document.getElementById('form3').classList.remove('active');
+            document.getElementById('form4').classList.remove('active');
+            document.getElementById('form5').classList.remove('active');
+            document.getElementById('form6').classList.remove('active');
+        }
+
+        function showForm3() {
+            document.getElementById('form1').classList.remove('active');
+            document.getElementById('form2').classList.remove('active');
+            document.getElementById('form3').classList.add('active');
+            document.getElementById('form4').classList.remove('active');
+            document.getElementById('form5').classList.remove('active');
+            document.getElementById('form6').classList.remove('active');
+        }
+
+        function showForm4() {
+            document.getElementById('form1').classList.remove('active');
+            document.getElementById('form2').classList.remove('active');
+            document.getElementById('form3').classList.remove('active');
+            document.getElementById('form4').classList.add('active');
+            document.getElementById('form5').classList.remove('active');
+            document.getElementById('form6').classList.remove('active');
+        }
+
+        function showForm5() {
+            document.getElementById('form1').classList.remove('active');
+            document.getElementById('form2').classList.remove('active');
+            document.getElementById('form3').classList.remove('active');
+            document.getElementById('form4').classList.remove('active');
+            document.getElementById('form5').classList.add('active');
+            document.getElementById('form6').classList.remove('active');
+        }
+
+        function showForm6() {
+            document.getElementById('form1').classList.remove('active');
+            document.getElementById('form2').classList.remove('active');
+            document.getElementById('form3').classList.remove('active');
+            document.getElementById('form4').classList.remove('active');
+            document.getElementById('form5').classList.remove('active');
+            document.getElementById('form6').classList.add('active');
+        }
+
+        function addContact() {
+            const table = document.getElementById('contactTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            newRow.innerHTML = `
+                <td><input type="text" name="contactName[]" required></td>
+                <td><input type="email" name="contactEmail[]" required></td>
+                <td><input type="tel" name="contactPhNum[]" required></td>
+                <td><input type="text" name="contactDesignation[]" required></td>
+                <td><button type="button" class="remove-button" onclick="removeContact(this)">Remove</button></td>
+            `;
+        }
+
+        function removeContact(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        function addVm() {
+            const table = document.getElementById('vmTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            newRow.innerHTML = `
+                <td><input type="text" name="nameApp[]" required></td>
+                <td><input type="number" name="numOfCpus[]" required></td>
+                <td><select class="custom-select rounded-0" name="servicesUsed[]" id="exampleSelectRounded0" required>
+                                        <option>Web </option>
+                                        <option>DB</option>
+                                        <option>Web+Db</option>
+                                        </select> 
+                                        </td>
+                <td><input type="text" name="osVer[]" required></td>
+                <td><button type="button" class="remove-button" onclick="removeVm(this)">Remove</button></td>
+            `;
+        }
+
+        function removeVm(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+
+</html>
